@@ -286,6 +286,11 @@ var watchSource = function (done) {
 	done();
 };
 
+var deploy = function (done) new Promise(function(resolve, reject) {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
+
 
 /**
  * Export Tasks
@@ -310,4 +315,9 @@ exports.watch = series(
 	exports.default,
 	startServer,
 	watchSource
+);
+
+exports.deploy = series(
+  exports.default,
+  deploy
 );
