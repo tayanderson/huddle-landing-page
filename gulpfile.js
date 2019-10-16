@@ -286,7 +286,7 @@ var watchSource = function (done) {
 	done();
 };
 
-var deploy = function (done) new Promise(function(resolve, reject) {
+var deploy = function (done) {
   return gulp.src("./dist/**/*")
     .pipe(deploy())
 });
