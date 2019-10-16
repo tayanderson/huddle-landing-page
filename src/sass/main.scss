@@ -21,20 +21,16 @@ main {
   display:flex;
   align-items: center;
   flex:1;
-}
-
-
-.section {
-  margin: 0 auto;
+  flex-direction: column;
 }
 
 .navbar {
   background-color: transparent;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   width: 92%;
   margin: 0 auto;
   .navbar-item img {
-    max-height: 3.5rem;
+    max-height: 3rem;
   }
 }
 
@@ -42,7 +38,8 @@ main {
   margin: 0 auto;
   .column {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -64,6 +61,13 @@ main {
 
 .footer {
   background-color: transparent;
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    a {
+      color: #DD52D6;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -77,9 +81,8 @@ main {
     text-align: center;
   }
 
-  .footer {
-    .social-media-block {
-      justify-content: center;
-    }
+  .social-media-block {
+    padding-top:2rem;
+    justify-content: center;
   }
 }
