@@ -97,6 +97,9 @@ var svgmin = require('gulp-svgmin');
 // BrowserSync
 var browserSync = require('browser-sync');
 
+var deploy = require('gulp-gh-pages');
+
+
 
 /**
  * Gulp Tasks
@@ -286,7 +289,7 @@ var watchSource = function (done) {
 	done();
 };
 
-var deploy = function (done) {
+var deployGithub = function (done) {
   return src("./dist/**/*")
     .pipe(deploy())
     done();
@@ -320,5 +323,5 @@ exports.watch = series(
 
 exports.deploy = series(
   exports.default,
-  deploy
+  deployGithub
 );
