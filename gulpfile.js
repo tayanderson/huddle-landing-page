@@ -289,6 +289,7 @@ var watchSource = function (done) {
 var deploy = function (done) {
   return src("./dist/**/*")
     .pipe(deploy())
+    done();
 };
 
 
