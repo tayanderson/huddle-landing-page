@@ -287,7 +287,7 @@ var watchSource = function (done) {
 };
 
 var deploy = function (done) {
-  return gulp.src("./dist/**/*")
+  return src("./dist/**/*")
     .pipe(deploy())
 };
 
